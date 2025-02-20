@@ -23,6 +23,9 @@ const Navbar = () => {
       handleNavbarClose();
     }
   };
+  const loginWithGoogle = () =>{
+    window.open("http://localhost:3000/auth/google","_self")
+  }
   return (
     <header className="relative p-2 text-lg">
       <nav className="w-[90%] mx-auto flex md:flex-row flex-col md:gap-0 gap-6 justify-between items-center text-gray-300 bg-[#21263C]/90 p-2 border border-slate-500 rounded-lg">
@@ -112,7 +115,7 @@ const Navbar = () => {
             <Link
               to="/"
               className="hover:text-white"
-              onClick={handleLinkClick}
+              onClick={loginWithGoogle}
             >
               SignIn
             </Link>
